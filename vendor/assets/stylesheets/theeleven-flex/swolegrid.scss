@@ -1,13 +1,14 @@
 //defaults and browser reset
-@import 'flex/defaults';
-@import 'flex/reboot';
+@import 'theeleven-flex/defaults';
+@import 'theeleven-flex/reboot';
 
 //core grid
-@import 'flex/mixins';
-@import 'flex/generators';
-@import 'flex/grid';
+@import 'theeleven-flex/mixins';
+@import 'theeleven-flex/generators';
+@import 'theeleven-flex/grid';
 
 //optional modules
-@import 'flex/modules/cards';
-@import 'flex/modules/navbar';
-@import 'flex/modules/tabs';
+@import 'theeleven-flex/modules/plebs';
+@import 'theeleven-flex/modules/cards';
+@import 'theeleven-flex/modules/navbar';
+@import 'theeleven-flex/modules/tabs';
