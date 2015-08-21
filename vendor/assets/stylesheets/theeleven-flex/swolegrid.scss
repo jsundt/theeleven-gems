@@ -1,0 +1,13 @@
+//defaults and browser reset
+@import 'flex/defaults';
+@import 'flex/reboot';
+
+//core grid
+@import 'flex/mixins';
+@import 'flex/generators';
+@import 'flex/grid';
+
+//optional modules
+@import 'flex/modules/cards';
+@import 'flex/modules/navbar';
+@import 'flex/modules/tabs';

@@ -1,0 +1,74 @@
+//Core grid
+.gym,
+.section {
+  padding: 50px 0;
+  @include gen-bg-variants();
+}
+.room,
+.bg {
+  @include gen-bg-variants();
+}
+.text {
+  @include gen-color-variants();
+}
+
+// Container with set widths
+.max-reps,
+.container {
+  @include make-container();
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
+// Fluid container
+.no-max-reps,
+.container-fluid {
+  @include make-container();
+}
+
+
+// Rows
+.get-swole,
+.row {
+  @include make-row();
+}
+
+// Base flex item
+.bench,
+.item {
+  flex-grow: 1;
+  min-height: 1px;
+}
+.big-bench,
+.big-item {
+  @extend .bench;
+  flex-grow: 2;
+}
+
+.juice,
+.grow {
+  flex-grow: 1;
+}
+.no-gains,
+.no-grow {
+  flex-grow: 0;
+}
+
+
+  // Flex column reordering
+  @include gen-reorder();
+
+  // Set direction
+  @include gen-directions();
+
+  // Horizontal align items in row
+  @include gen-justify();
+
+  // Alignment for every item in row
+  @include gen-align-items();
+
+  // Alignment for every item in row
+  @include gen-align-self();

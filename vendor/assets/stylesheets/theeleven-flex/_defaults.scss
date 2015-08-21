@@ -1,30 +1,7 @@
-# Theeleven::Flex
+/*
+** Default values
+*/
 
-Initial gem version of swolegrid
-https://github.com/jsundt/swolegrid
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'theeleven-flex', github: 'jsundt/theeleven-gems'
-```
-
-And then execute:
-    $ bundle
-
-
-Add this line to your applications scss file after your project specific variables:
-
-```scss
-@import 'theeleven-flex/swolegrid'
-```
-
-
-## Default variables
-
-```scss
 $night:                     #000 !default;
 $black:                     #111 !default;
 $gray-dark:                 #373a3c !default;
@@ -59,13 +36,20 @@ $line-height:               1.4em !default;
 
 
 // Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
 $enable-cards:       true !default;
 $enable-navbar:      true !default;
 $enable-tabs:        true !default;
 
 
 
-//Grid
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
 $grid-breakpoints: (
   xs: 0,      // Extra small screen / phone
   sm: 34em,   // Small screen / phone
@@ -73,6 +57,11 @@ $grid-breakpoints: (
   lg: 62em,   // Large screen / desktop
   xl: 75em    // Extra large screen / wide desktop
 ) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
   sm: 34rem,    // 480
@@ -82,7 +71,6 @@ $container-max-widths: (
 ) !default;
 
 $grid-gutter-width: 30px !default;
-
 
 
 // Default color variants
@@ -95,4 +83,3 @@ $color-variants: (
   night: $night,
   'silver': $silver
 ) !default;
-```
