@@ -18,7 +18,7 @@ And then execute:
 Add this line to your applications scss file after your project specific variables:
 
 ```scss
-@import 'theeleven-flex/swolegrid'
+@import 'theeleven-flex/swolegrid';
 ```
 
 
