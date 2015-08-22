@@ -14,7 +14,7 @@ module Theeleven
         FileUtils.mkdir_p "app/assets/stylesheets/base"
 
         #Copy variable file
-        copy_file "../../vendor/css/theeleven-flex/_defaults.scss", "app/assets/stylesheets/base/overrides.scss"
+        copy_file "../../vendor/stylesheets/theeleven-flex/_defaults.scss", "app/assets/stylesheets/base/overrides.scss"
 
       end
     end #end generator
