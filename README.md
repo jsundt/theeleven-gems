@@ -29,6 +29,7 @@ For boilerplate generation run:
 cd your-new-project
 
 rails generate theeleven:boilerplate:create
+rails generate theeleven:flex:override
 ```
 
 ## Default variables

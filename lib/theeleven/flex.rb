@@ -1,4 +1,5 @@
 require "theeleven/flex/version"
+require 'rails/generators'
 
 module Theeleven
   module Flex
