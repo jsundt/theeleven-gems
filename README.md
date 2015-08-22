@@ -1,6 +1,8 @@
-# Theeleven::Flex
+# The Eleven gems
+Includes:
 
-Initial gem version of swolegrid
+– Generator to set up initial views and asset files
+– Initial gem version of swolegrid (flexbox grid)
 https://github.com/jsundt/swolegrid
 
 ## Installation
@@ -8,19 +10,26 @@ https://github.com/jsundt/swolegrid
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'theeleven-flex', github: 'jsundt/theeleven-gems'
+gem 'theeleven-boilerplate', github: 'jsundt/theeleven-gems' #add for generator
+gem 'theeleven-flex', github: 'jsundt/theeleven-gems' #add for flexbox
 ```
 
 And then execute:
     $ bundle
 
 
-Add this line to your applications scss file after your project specific variables:
+For flexbox add this line to your applications scss file after your project specific variables:
 
 ```scss
 @import 'theeleven-flex/swolegrid';
 ```
 
+For generator run:
+```
+cd your-new-project
+
+theeleven-boilerplate:Advanced
+```
 
 ## Default variables
 

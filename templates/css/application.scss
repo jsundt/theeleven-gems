@@ -1,0 +1,31 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ *= require_self
+ */
+
+// defaults and helpers
+@import "base/config"; //Use variables for all colours
+@import "base/mixins"; //Reusable mixins and media queries
+@import "base/type"; //Base type hierachy, needs a redo..
+@import "base/animations";
+@import "base/layout"; //Base layout styles
+
+
+// Import reusable modules
+@import "modules/*"; //import all app modules
+@import "pages/*"; //import all app pages
+
+
+// For anything quick and dirty that needs thrown in
+@import "base/shame";

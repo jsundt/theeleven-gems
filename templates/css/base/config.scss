@@ -1,0 +1,83 @@
+
+
+
+/* --------------------------------------- *\
+  #Project Settings
+\* --------------------------------------- */
+
+// Consistent settings
+$br: 5px; // Border-radius
+$padding: 40px; // Padding and margins
+$form-height: 44px; // Consistent height for buttons, inputs etc.
+$timing: cubic-bezier(0.25, -0.25, 0.75, 1.25); //Animation timing
+
+
+// Font Stacks
+$title-font: serif;
+$body-font: sans-serif;
+$mono-font: monospace;
+
+
+// Gray Scale
+$white: #fff;
+$off-white: #f2f2f2;
+$silver: #DFE7EB;
+$grey: #aaa;
+$dark-grey: #888;
+$black: #111;
+
+$shadow: rgba(0,0,0,0.2);
+
+// Project color variables
+$primary-colour: #03A9F4; //Blue
+$secondary-colour: #2E424D; //Dark grey
+//$tertiary-colour: #aaa;
+
+$body-bg: #f2f2f2;
+
+
+// Font Colours
+$title-colour: $secondary-colour;
+$text-colour: $secondary-colour;
+$subtle-colour: $grey;
+$link-colour: $primary-colour;
+$link-hover: $secondary-colour;
+
+
+// Better default colors
+// Cool
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime:  #01ff70;
+// Warm
+$yellow:  #ffdc00;
+$orange:  #ff851b;
+$red:     #ff4136;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
+
+
+$twitter: #55ACEE;
+$linkedin: #0077B5;
+
+
+// Utility colours
+$danger-colour: $charlie-warning; // Bad color for errors, validation etc.
+$success-colour: $charlie-success; // Good color for success etc.
+$info-colour: $primary-colour; // Good color for success etc.
+$warning-colour: $orange; // Good color for success etc.
+
+$eleven-red: #EB2227;
+$eleven-blue: #00ADEF;
+
+
+// Responsive breakpoints – 
+$small-break: 480px;
+$medium-break: 768px; //bootstrap sm
+$big-break: 992px;    //bootstrap md
+$huge-break: 1200px;  //bootstrap lg
