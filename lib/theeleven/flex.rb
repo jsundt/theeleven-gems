@@ -3,12 +3,10 @@ require 'rails/generators'
 
 module Theeleven
   module Flex
-    module Rails
-      class Engine < ::Rails::Engine
-      end
+    class Engine < ::Rails::Engine
     end
 
-    class OverrideGenerator < Rails::Generators::Base
+    class CustomGenerator < Rails::Generators::Base
       source_root File.expand_path('..', __FILE__)
 
       # Copy all needed stylesheets in the asset directory of the application
