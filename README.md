@@ -24,11 +24,11 @@ For flexbox add this line to your applications scss file after your project spec
 @import 'theeleven-flex/swolegrid';
 ```
 
-For generator run:
+For boilerplate generation run:
 ```
 cd your-new-project
 
-theeleven-boilerplate:Advanced
+rails generate theeleven:boilerplate:create
 ```
 
 ## Default variables
