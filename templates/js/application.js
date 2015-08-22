@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.scrollTo.min
+//= require theeleven-boilerplate/jquery.scrollTo.min
 //= require_tree ./core/
 
 $(document).on('ready', function() {
