@@ -147,6 +147,7 @@ $font-sizes: (
   }
 }
 
+
 @mixin font-size-caption() {
   font-size: size(small, 1);
 
@@ -268,6 +269,8 @@ $font-sizes: (
   }
 }
 
+
+//used by default button
 @mixin text-caption($check: true) {
   @include font-size-caption();
   margin-bottom: 0;

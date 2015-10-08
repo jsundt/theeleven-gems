@@ -42,6 +42,7 @@ module Theeleven
         #CSS Modules
         copy_file "../../templates/css/modules/buttons.scss", "app/assets/stylesheets/modules/buttons.scss"
         copy_file "../../templates/css/modules/forms.scss", "app/assets/stylesheets/modules/forms.scss"
+        copy_file "../../templates/css/modules/tooltips.scss", "app/assets/stylesheets/modules/tooltips.scss"
 
 
         #Application Layout
