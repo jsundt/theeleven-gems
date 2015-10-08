@@ -20,7 +20,7 @@ $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 
 
-$body-bg:                   $gray-lightest !default;
+$body-bg:                   $gray-lightest !default; //body background color
 $body-color:                $gray-dark !default;
 $text-muted:                $gray-light !default;
 
@@ -84,3 +84,12 @@ $color-variants: (
   night: $night,
   'silver': $silver
 ) !default;
+
+
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 4,
+  overlay: 5,
+  modal: 6
+);

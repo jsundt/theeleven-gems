@@ -1,9 +1,9 @@
 
 
 
-/* --------------------------------------- *\
-  #Project Mixins
-\* --------------------------------------- */
+//-----------------------------------\\
+// Project Mixins
+//-----------------------------------\\
 
 // Clear after floats
 @mixin clearfix {
@@ -11,7 +11,7 @@
 
   &:before,
   &:after {
-    content: "\0020";
+    content: '\0020';
     display: block;
     height: 0;
     overflow: hidden;
@@ -23,7 +23,8 @@
 }
 
 // Apply clearfix
-.clearfix {
+.clearfix,
+.row {
   @include clearfix;
 }
 
@@ -35,16 +36,19 @@
     @content;
   }
 }
+
 @mixin max-width($res) {
   @media screen and (max-width: $res) {
     @content;
   }
 }
+
 @mixin min-height($res) {
   @media screen and (min-height: $res) {
     @content;
   }
 }
+
 @mixin max-height($res) {
   @media screen and (max-height: $res) {
     @content;

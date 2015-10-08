@@ -12,11 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require theeleven-boilerplate/svg4everybody
 //= require theeleven-boilerplate/jquery.scrollTo.min
 //= require_tree ./core/
 
+svg4everybody({
+  fallback: function (src, svg, use) {
+    return 'fallback.png'; // always return fallback.png
+  },
+  nosvg: false, // shiv <svg> and <use> elements and use image fallbacks (requires legacy version of svg4everybody)
+  polyfill: true // polyfill <use> elements for External Content
+});
+
 $(document).on('ready', function() {
 
-  
+
 
 }); //ready function

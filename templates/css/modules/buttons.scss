@@ -1,16 +1,62 @@
 
 
 
-/* --------------------------------------- *\
-  #Buttons
-\* --------------------------------------- */
+//-----------------------------------\\
+// Button variables
+//-----------------------------------\\
 
-// Default button
+//////////////// color, background, border
+$buttons: (
+  'secondary': (
+    $white,
+    $secondary-colour,
+    darken($secondary-colour, 5%)
+  ),
+  'dark': (
+    $white,
+    $tertiary-colour,
+    darken($tertiary-colour, 5%)
+  ),
+  'ghost': (
+    $secondary-colour,
+    transparent,
+    rgba($secondary-colour, 0.5)
+  ),
+  'ghost-white': (
+    $white,
+    transparent,
+    rgba($white, 0.25)
+  ),
+);
+
+//////////////// color, background, border
+$button-hover-states: (
+  'to-danger': (
+    $white,
+    $danger-colour,
+    darken($danger-colour, 5%)
+  ),
+);
+
+
+
+//-----------------------------------------\\
+// # Button Generation
+//-----------------------------------------\\
+
 .btn {
+  // Generate btn--%{name} classes for default and hover states
+  @include gen-buttons();
+  @include gen-button-hover();
+
+
+  // Default button styling
+  @include text-caption();
+
   border-radius: $br;
-  background: transparent;
-  border: 1px solid $primary-colour;
-  color: $primary-colour;
+  background: darken($primary-colour, 5%);
+  border: 1px solid darken($primary-colour, 10%);
+  color: $white;
   display: inline-block;
   height: $form-height;
   line-height: $form-height;
@@ -18,167 +64,50 @@
   padding: 0 25px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
-
-  &:hover {
-    cursor: pointer;
-  }
-  &:hover,
-  &:focus {
-    background: $primary-colour;
-    border-color: $primary-colour;
-    color: #fff;
-    text-decoration: none;
-
-    transition: background 0.2s, border-color 0.2s, color 0.1s;
-  }
-
-  &:active {
-    background: darken($primary-colour, 10);
-    border-color: darken($primary-colour, 10);
-  }
 
   @include min-width($small-break) {
     width: auto;
     margin: 0;
     display: inline-block;
   }
-}
-
-// Primary action button
-.btn-primary {
-  background-color: darken($primary-colour, 7%);
-  border-color: darken($primary-colour, 7%);
-  color: #fff;
-
-  &:hover,
-  &:focus {
-    background: $primary-colour, 5%;
-    border-color: $primary-colour, 5%;
-    color: #fff;
-  }
-
-  &:active {
-    background: darken($primary-colour, 5%);
-    border-color: darken($primary-colour, 5%);
-    color: #fff;
-  }
-}
-
-// Secondary action button
-.btn-secondary {
-  background-color: $secondary-colour;
-  border-color: $secondary-colour;
-  color: #fff;
-
-  &:hover,
-  &:focus {
-    background: $primary-colour;
-    border-color: $primary-colour;
-    color: #fff;
-  }
-
-  &:active {
-    background: $primary-colour;
-    border-color: $primary-colour;
-    color: #fff;
-  }
-}
-
-// Success action button
-.btn-success {
-  background-color: $success-colour;
-  border-color: $success-colour;
-  color: #fff;
-
-  &:hover,
-  &:focus {
-    background: $primary-colour;
-    border-color: $primary-colour;
-    color: #fff;
-  }
-
-  &:active {
-    background: $primary-colour;
-    border-color: $primary-colour;
-    color: #fff;
-  }
-}
-
-// Remove action button
-.btn-remove {
-  background-color: transparent;
-  border-color: $grey;
-  color: $grey;
-
-  &:hover,
-  &:focus {
-    background: $danger-colour;
-    border-color: $danger-colour;
-    color: #fff;
-  }
-
-  &:active {
-    background: $danger-colour;
-    border-color: $danger-colour;
-    color: #fff;
-  }
-}
-
-
-// Ghost button
-.btn-ghost {
-  line-height: ($form-height - 2);
-  border-color: $grey;
-  color: $black;
-  padding: 1px 25px;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-    border-color: $primary-colour;
-    border-width: 2px;
-    color: $primary-colour;
-    padding: 0 24px;
-  }
-
-  &:active {
-    background: darken($primary-colour, 10);
-  }
-}
-
-// Link button - a button that looks like a link
-.btn-link {
-  box-shadow: none;
-  background: transparent;
-  border: 0;
-  color: $primary-colour;
-  text-shadow: none;
-  text-transform: none;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-    color: $secondary-colour;
-    text-decoration: underline;
-  }
-}
-
-.btn-disabled {
-  background: $secondary-colour;
-  color: $white;
-  border-color: $secondary-colour;
 
   &:hover {
-    cursor: default;
-    background: $secondary-colour;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    background: $primary-colour;
+    border-color: darken($primary-colour, 5%);
     color: $white;
-    border-color: $secondary-colour;
+    text-decoration: none;
+    outline: none;
+
+    transition: background 0.15s, border-color 0.15s, color 0.1s;
+  }
+
+  &:active {
+    background: darken($primary-colour, 10%);
+    border-color: darken($primary-colour, 10%);
+  }
+}
+
+
+
+//-----------------------------------------\\
+// # Custom buttons
+//-----------------------------------------\\
+
+.btn--disabled {
+  opacity: 0.3;
+
+  &:hover {
+    // scss-lint:disable DuplicateProperty
+    cursor: default;
+    cursor: not-allowed;
   }
 }

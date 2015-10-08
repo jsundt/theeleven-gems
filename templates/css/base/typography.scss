@@ -1,0 +1,501 @@
+
+
+
+//-----------------------------------\\
+// Typography variables
+//-----------------------------------\\
+
+// Font Stacks
+$title-font: $charlie-font;
+$body-font: $charlie-font;
+$mono-font: monospace;
+
+$title-line-height: 1.2;
+$title-weight: 400;
+
+$text-line-height: 1.5;
+$text-weight: 400;
+
+$label-line-height: 1;
+$label-weight: 400;
+
+
+// Font Colours
+$title-color: $secondary-colour;
+$text-color: rgba($secondary-colour, 0.75);
+$text-color-muted: rgba($secondary-colour, 0.5);
+
+$title-white: $white;
+$text-white: rgba($white, 0.75);
+$text-white-muted: rgba($white, 0.5);
+
+$link-color: $title-color;
+$link-hover: $brand-primary;
+
+
+// Font sizes ( mobile , tablet++ )
+// use font-size: size(text, 2) etc
+$font-sizes: (
+  'h1':    (36px, 44px),
+  'h2':    (30px, 36px),
+  'h3':    (24px, 28px),
+  'h4':    (20px, 24px),
+  'h5':    (18px, 20px),
+  'h6':    (17px, 18px),
+  'text':  (15px, 17px),
+  'label': (13px, 14px),
+  'small': (11px, 12px)
+);
+
+
+
+//-----------------------------------\\
+// Typography mixins
+//-----------------------------------\\
+
+@mixin title-default() {
+  //Used for h1–h6
+  font-family: $title-font;
+  font-weight: $title-weight;
+  font-style: normal;
+  line-height: $title-line-height;
+  color: $title-color;
+}
+
+@mixin text-default() {
+  //Used for body and p
+  font-family: $body-font;
+  color: $text-color;
+  font-style: normal;
+  font-weight: $text-weight;
+  line-height: $text-line-height;
+  margin: 0;
+}
+
+@mixin text-margin() {
+  //default margin bellow each p and h tag
+  margin: 0 0 1em; //( $gutter / 2 )
+}
+
+
+
+//-----------------------------------\\
+// Size mixins
+//-----------------------------------\\
+
+@mixin font-size-h1() {
+  font-size: size(h1, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h1, 2);
+  }
+}
+
+@mixin font-size-h2() {
+  font-size: size(h2, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h2, 2);
+  }
+}
+
+@mixin font-size-h3() {
+  font-size: size(h3, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h3, 2);
+  }
+}
+
+@mixin font-size-h4() {
+  font-size: size(h4, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h4, 2);
+  }
+}
+
+@mixin font-size-h5() {
+  font-size: size(h5, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h5, 2);
+  }
+}
+
+@mixin font-size-h6() {
+  font-size: size(h6, 1);
+
+  @include min-width($small-break) {
+    font-size: size(h6, 2);
+  }
+}
+
+@mixin font-size-text() {
+  font-size: size(text, 1);
+
+  @include min-width($small-break) {
+    font-size: size(text, 2);
+  }
+}
+
+@mixin font-size-label() {
+  font-size: size(label, 1);
+
+  @include min-width($small-break) {
+    font-size: size(label, 2);
+  }
+}
+
+@mixin font-size-caption() {
+  font-size: size(small, 1);
+
+  @include min-width($small-break) {
+    font-size: size(small, 2);
+  }
+}
+
+
+
+//-----------------------------------\\
+// Mixins for page type hierarchy
+//-----------------------------------\\
+
+@mixin page-title($check: true) {
+  @include font-size-h1();
+  text-align: center;
+  margin: 0;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $title-color;
+  } @else { // negative
+    color: $title-white;
+  }
+}
+
+@mixin page-subtitle($check: true) {
+  @include font-size-h6();
+  text-align: center;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else { // negative
+    color: $text-white;
+  }
+}
+
+@mixin section-title($check: true) {
+  @include font-size-h2();
+  text-align: center;
+  margin: 0;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $title-color;
+  } @else { // negative
+    color: $title-white;
+  }
+}
+
+@mixin text-title($check: true) {
+  @include font-size-h3();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $title-color;
+  } @else { // negative
+    color: $title-white;
+  }
+}
+
+@mixin text-subtitle($check: true) {
+  @include font-size-h4();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $title-color;
+  } @else { // negative
+    color: $title-white;
+  }
+}
+
+@mixin text-lead($check: true) {
+  @include font-size-h5();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color;
+  } @else { // negative
+    color: $text-white;
+  }
+}
+
+@mixin text-body($check: true) {
+  @include font-size-text();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color;
+  } @else { // negative
+    color: $text-white;
+  }
+}
+
+@mixin text-body-muted($check: true) {
+  @include font-size-text();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else { // negative
+    color: $text-white-muted;
+  }
+}
+
+@mixin text-label($check: true) {
+  @include font-size-label();
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else { // negative
+    color: $text-white-muted;
+  }
+}
+
+@mixin text-caption($check: true) {
+  @include font-size-caption();
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else { // negative
+    color: $text-white-muted;
+  }
+}
+
+@mixin card-title($check: true) {
+  @include font-size-h4();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $title-color;
+  } @else {
+    color: $text-color;
+  }
+}
+
+@mixin card-caption-title($check: true) {
+  @include font-size-caption();
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else {
+    color: $text-white;
+  }
+}
+
+@mixin text-note($check: true) {
+  @include font-size-label();
+
+  // Use positive or negative text color
+  @if $check == true {
+    color: $text-color-muted;
+  } @else {
+    color: $text-white;
+  }
+}
+
+
+
+//-----------------------------------\\
+// Typography defaults
+//-----------------------------------\\
+
+body {
+  @include text-default();
+  @include text-body();
+  font-kerning: normal;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include title-default();
+  @include text-margin();
+}
+
+h1,
+.page-title {
+  @include page-title();
+}
+
+  .page-title--white {
+    @include page-title(negative);
+  }
+
+  .page-subtitle,
+  .section-subtitle {
+    @include page-subtitle();
+  }
+
+  .page-subtitle--white,
+  .section-subtitle--white {
+    @include page-subtitle(negative);
+  }
+
+h2,
+.section-title {
+  @include section-title();
+}
+
+  .section-title--white {
+    @include section-title(negative);
+  }
+
+
+h3,
+.text-title {
+  @include text-title();
+}
+
+  .text-title--white {
+    @include text-title(negative);
+  }
+
+h4,
+.text-subtitle {
+  @include text-subtitle();
+}
+
+  .text-subtitle--white {
+    @include text-subtitle(negative);
+  }
+
+h5,
+.text-lead {
+  @include text-lead();
+}
+
+  .text-lead--white {
+    @include text-lead(negative);
+  }
+
+h6,
+p,
+.text-body {
+  @include text-body();
+}
+
+  .text-body--white {
+    @include text-body(negative);
+  }
+
+p,
+.text-body {
+  @include text-default();
+}
+
+p,
+.text-body,
+.text--margin {
+  @include text-margin();
+}
+
+
+.text-label {
+  @include text-label();
+}
+
+  .text-label--white {
+    @include text-label(negative);
+  }
+
+.text-caption {
+  @include text-caption();
+}
+
+  .text-caption--white {
+    @include text-caption(negative);
+  }
+
+.text-note {
+  @include text-note();
+}
+
+  .text-note--white {
+    @include text-note(negative);
+  }
+
+
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover;
+  }
+}
+
+.hidden-link {
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary-colour;
+  }
+}
+
+.hidden-link--white {
+  @extend .hidden-link;
+
+  color: $text-white;
+}
+
+
+//-----------------------------------\\
+// Typography utility classes
+//-----------------------------------\\
+
+.text--left   { text-align: left; }
+.text--center { text-align: center; }
+.text--right  { text-align: right; }
+.text--normal { font-weight: 400; }
+.text--bold   { font-weight: 700; }
+
+  .text-mobile--center {
+    @include max-width($medium-break - 1) {
+      text-align: center;
+    }
+
+    .icon {
+      width: 100%;
+    }
+  }
+
+
+.text {
+  //generate .text--%{color} from color-variants list
+  @include gen-color-variants();
+}
+
+.emoji {
+  font-family: sans-serif !important;
+  color: black !important;
+}

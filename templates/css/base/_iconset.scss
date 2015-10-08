@@ -1,0 +1,57 @@
+
+
+
+//-----------------------------------\\
+// Iconset Mk.3 – Generation
+//-----------------------------------\\
+
+@mixin icon($width: 50px, $height: 50px, $fill: currentColor, $padding: 0) {
+  width: $width;
+  height: $height;
+  fill: $fill;
+  padding: $padding;
+}
+
+%icon {
+  @include icon;
+}
+
+%icon--app {
+  @include icon($padding: 11px);
+}
+
+%icon--small {
+  @include icon(30px, 30px, currentColor);
+}
+
+
+
+//-----------------------------------\\
+// Iconset Mk.3 – Default Classes
+//-----------------------------------\\
+
+.mk3-icon {
+  @extend %icon;
+}
+
+.mk3-icon--app {
+  @extend %icon--app;
+}
+
+.mk3-icon--small {
+  @extend %icon--small;
+}
+
+.mk3-icon--colored {
+  .icon-part--success {
+    fill: $success-colour;
+  }
+}
+
+.mk3-icon,
+.mk3-icon--app,
+.mk3-icon--small {
+  &:hover {
+    fill: $primary-colour;
+  }
+}
