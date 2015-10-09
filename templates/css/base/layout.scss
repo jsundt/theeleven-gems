@@ -8,3 +8,24 @@
 body {
   background: $body-bg;
 }
+
+.section,
+.padding {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+  //generate .section--%{background} from color-variants list
+  .section {
+    @include gen-bg-variants();
+  }
+
+  .section--bottom,
+  .padding--bottom {
+    padding-bottom: $padding;
+  }
+
+  .section--top,
+  .padding--top {
+    padding-top: $padding;
+  }
