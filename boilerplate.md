@@ -1,4 +1,4 @@
-[back to overview](../../../tree/feature/mark2)
+[back to overview](../../../tree/feature/mark2#the-eleven-gems)
 
 
 # The Eleven Boilerplate
@@ -13,7 +13,7 @@ Also includes some useful vendor files that are used in a lot of projects.
 gem 'theeleven-boilerplate', github: 'jsundt/theeleven-gems' #add for generator
 ```
 
-And then execute: $ bundle
+Add line above to gemfile and execute: $ bundle
 
 
 ### Installation
@@ -27,15 +27,15 @@ cd your-new-project
 rails generate theeleven:boilerplate:create
 ```
 
-You'll need to add application__core.js to the asset initializer.
+You'll need to add application__core.js to the asset initializer. A rails error will tell you how...
 
 
 ### Icon sets
 
-The boilerplate includes a couple of default svg icon set images. Use with external svg file + svg4everybody polyfill. Or as inline svg by moving everything uncommenting the sprite in the layout file.
+The boilerplate includes a couple of default svg icon set images. Use with external svg file + svg4everybody polyfill. Or as inline svg by uncommenting the sprite in the layout file.
 
-```ruby
-asset_path 'te-social-icons.svg#social__twitter'
+```erb
+<%= asset_path 'te-social-icons.svg#social__twitter' %>
 ```
 
 *links to look at svg sprites are coming here soonish...*

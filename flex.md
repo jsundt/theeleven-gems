@@ -1,4 +1,4 @@
-[back to overview](../../../tree/feature/mark2)
+[back to overview](../../../tree/feature/mark2#the-eleven-gems)
 
 
 # Flexbox Grid
@@ -11,7 +11,7 @@ The Eleven's simple flexbox grid for modern browsers
 gem 'theeleven-flex', github: 'jsundt/theeleven-gems' #add for flexbox
 ```
 
-And then execute: $ bundle
+Add line above to gemfile and execute: $ bundle
 
 
 ### Installation
