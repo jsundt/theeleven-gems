@@ -12,11 +12,16 @@ A collection of simple gems by the teams at [The Eleven](http://www.theeleven.co
 
 ## Install Gems
 
-Add this line to your application's Gemfile:
+Add the gems you want to your gemfile and execute: $ bundle
 
 ```ruby
 gem 'theeleven-boilerplate', github: 'jsundt/theeleven-gems' #add for generator
 gem 'theeleven-flex', github: 'jsundt/theeleven-gems' #add for flexbox
 ```
 
-And then execute: $ bundle
+
+## Enviroment setup
+
+Install an scss linter for your editor. *Use the config I'll provide here later...*
+
+This ensures all code stays readable and similar across all projects at The Eleven.

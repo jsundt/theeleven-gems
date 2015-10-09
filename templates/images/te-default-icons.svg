@@ -1,11 +1,8 @@
-<!-- Base SVG Sprite by The Eleven
-<svg class="icon">
-  <use xlink:href="#social-twitter"></use>
-</svg>
--->
-<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Social and contact icons -->
+
+
+  <!-- Social and contact Icons -->
   <symbol id="social__linkedin" viewBox="0 0 50 50">
     <title>Linkedin icon</title>
     <path d="M7.7 18.1h7.6v22.8H7.7zM34 17.5c-4 0-5.8 2.2-6.8 3.8v0-3.2h-7.6c.1 2.1 0 22.8 0 22.8h7.6V28.2c0-.7.1-1.4.3-1.9.5-1.4 1.8-2.8 3.9-2.8 2.7 0 3.8 2.1 3.8 5.2v12.2h7.6V27.8c-.1-7-3.8-10.3-8.8-10.3zM11.6 7.1C9 7.1 7.3 8.8 7.3 11s1.7 3.9 4.2 3.9h.1c2.6 0 4.3-1.8 4.3-3.9-.1-2.2-1.7-3.9-4.3-3.9z"/>
@@ -40,5 +37,8 @@
     <title>Chat icon</title>
     <path d="M25 15.4c-6.1 0-11 3.9-11 8.7 0 2.5 1.4 4.8 3.6 6.4l-1.3 4.3 8.7-2c6.1 0 11-3.9 11-8.7s-4.9-8.7-11-8.7z"/>
   </symbol>
+
+
+
 
 </svg>

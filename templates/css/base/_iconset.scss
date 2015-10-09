@@ -30,27 +30,27 @@
 // Iconset Mk.3 – Default Classes
 //-----------------------------------\\
 
-.mk3-icon {
+.icon {
   @extend %icon;
 }
 
-.mk3-icon--app {
+.icon--app {
   @extend %icon--app;
 }
 
-.mk3-icon--small {
+.icon--small {
   @extend %icon--small;
 }
 
-.mk3-icon--colored {
+.icon--colored {
   .icon-part--success {
     fill: $success-colour;
   }
 }
 
-.mk3-icon,
-.mk3-icon--app,
-.mk3-icon--small {
+.icon,
+.icon--app,
+.icon--small {
   &:hover {
     fill: $primary-colour;
   }

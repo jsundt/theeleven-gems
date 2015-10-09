@@ -20,8 +20,14 @@ module Theeleven
         FileUtils.remove_file "app/assets/stylesheets/application.css"
 
 
+        #Iconset image files
+        copy_file "../../templates/images/te-default-icons.svg", "app/assets/images/te-default-icons.svg"
+        copy_file "../../templates/images/te-social-icons.svg", "app/assets/images/te-social-icons.svg"
+
+
         #Application JS
         copy_file "../../templates/js/application.js", "app/assets/javascripts/application.js"
+        copy_file "../../templates/js/application__core.js", "app/assets/javascripts/application__core.js"
 
 
         #Application CSS
