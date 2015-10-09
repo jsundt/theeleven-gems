@@ -35,8 +35,14 @@ You'll need to add application__core.js to the asset initializer. A rails error 
 The boilerplate includes a couple of default svg icon set images. Use with external svg file + svg4everybody polyfill. Or as inline svg by uncommenting the sprite in the layout file.
 
 ```erb
+<!-- External svg -->
 <svg class="icon">
   <use xlink:href="<%= asset_path 'iconset.svg#social__twitter' %>"></use>
+</svg>
+
+<!-- Inline svg -->
+<svg class="icon">
+  <use xlink:href="#social__twitter"></use>
 </svg>
 ```
 
