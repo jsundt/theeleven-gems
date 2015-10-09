@@ -37,7 +37,7 @@ The boilerplate includes a couple of default svg icon set images. Use with exter
 ```erb
 <!-- External svg -->
 <svg class="icon">
-  <use xlink:href="<%= asset_path 'iconset.svg#social__twitter' %>"></use>
+  <use xlink:href="<%= asset_path 'te-social-icons.svg#social__twitter' %>"></use>
 </svg>
 
 <!-- Inline svg -->
