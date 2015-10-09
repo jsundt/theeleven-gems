@@ -26,12 +26,17 @@ module Theeleven
 
         #Edit routes file
         inject_into_file 'config/routes.rb', :after => "Rails.application.routes.draw do" do
-          "\n  root to: 'welcome#brand'\n\n"
+          "\n\n  root to: 'welcome#brand'\n\n"
         end
 
         #Edit asset initializer file
         inject_into_file 'config/initializers/assets.rb', :after => "Precompile additional assets." do
-          "\n  Rails.application.config.assets.precompile += %w( application__core.js )'\n\n"
+          "\nRails.application.config.assets.precompile += %w( application__core.js )\n\n"
+        end
+
+        #Edit gemfile
+        inject_into_file 'Gemfile', :after => "#add for generator" do
+          "\n\ngem 'autoprefixer-rails'\ngem 'twitter-bootstrap-rails'\ngem 'less-rails'\ngem 'therubyracer', platforms: :ruby\n\ngem 'heroku-deflater', :group => :production\ngem 'rails_12factor', :group => :production"
         end
 
         #Create Initial welcome/brand
