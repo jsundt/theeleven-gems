@@ -52,5 +52,5 @@ The boilerplate includes a couple of default svg icon set images. Use with exter
 ### List of Vendors
 
 * **modernizr** - v.3.1.0 custom [website](https://modernizr.com/)
-* **jQuery.scrollTo** - version 1.4.14 [github](https://github.com/flesler/jquery.scrollTo)
+* **jQuery.scrollTo** - version 2.1.3 [github](https://github.com/flesler/jquery.scrollTo)
 * **svg4everybody** - version 2.0.0 [github](https://github.com/jonathantneal/svg4everybody)

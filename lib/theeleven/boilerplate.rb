@@ -10,14 +10,34 @@ module Theeleven
       source_root File.expand_path('..', __FILE__)
 
       # Copy all needed stylesheets in the asset directory of the application
-      def copy_stylesheets
+      def copy_files
         FileUtils.mkdir_p "app/assets/javascripts/core"
         FileUtils.mkdir_p "app/assets/stylesheets/base"
         FileUtils.mkdir_p "app/assets/stylesheets/modules"
         FileUtils.mkdir_p "app/assets/stylesheets/pages"
         FileUtils.mkdir_p "app/views/icons"
         FileUtils.mkdir_p "app/views/shared"
+        FileUtils.mkdir_p "app/views/welcome"
+        FileUtils.mkdir_p "app/views/welcome/brand"
         FileUtils.remove_file "app/assets/stylesheets/application.css"
+
+        #Create Initial Controller
+        copy_file "../../templates/rails/welcome_controller.rb", "app/controllers/welcome_controller.rb"
+
+        #Edit routes file
+        inject_into_file 'config/routes.rb', :after => "Rails.application.routes.draw do" do
+          "\n  root to: 'welcome#brand'\n\n"
+        end
+
+        #Edit asset initializer file
+        inject_into_file 'config/initializers/assets.rb', :after => "Precompile additional assets." do
+          "\n  Rails.application.config.assets.precompile += %w( application__core.js )'\n\n"
+        end
+
+        #Create Initial welcome/brand
+        copy_file "../../templates/views/welcome/brand.html.erb", "app/views/welcome/brand.html.erb"
+        copy_file "../../templates/views/welcome/brand/_typography.html.erb", "app/views/welcome/brand/_typography.html.erb"
+        copy_file "../../templates/views/welcome/brand/_iconset.html.erb", "app/views/welcome/brand/_iconset.html.erb"
 
 
         #Iconset image files

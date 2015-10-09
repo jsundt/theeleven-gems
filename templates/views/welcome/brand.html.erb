@@ -1,0 +1,98 @@
+<div class="section section--clean">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1>Initial project brand guidelines</h1>
+        <p class="page-subtitle">Hi there <span class="emoji">😊</span> – This page is used for design and development</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="row section--bottom">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="section-title">Typography – Positive</h1>
+        <p class="page-subtitle">Variants of black on white</p>
+      </div>
+    </div>
+    <div class="row section--bottom">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <%= render 'welcome/brand/type' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--secondary">
+  <div class="container">
+    <div class="row section--bottom">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="section-title--white">Typography Negative</h1>
+        <p class="page-subtitle--white">Variants of white on black/colour</p>
+      </div>
+    </div>
+    <div class="row section--bottom">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <%= render 'welcome/brand/type', color: 'white' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--clean dev-button-variants">
+  <style>.dev-button-variants .btn {margin-top: 5px;}</style>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="section-title">Button Variants</h1>
+        <p class="page-subtitle">Every Charlie Button</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <a href="#" class="btn">Default Button</a>
+        <a href="#" class="btn btn--secondary">Secondary Button</a>
+        <a href="#" class="btn btn--dark">Dark Button</a>
+        <a href="#" class="btn btn--ghost">Ghost Button</a>
+        <a href="#" class="btn btn--ghost-white">Ghost Button</a>
+        <a href="#" class="btn btn--disabled">Disabled button</a>
+        <a href="#" class="btn btn--secondary btn--disabled">Disabled button</a>
+      </div>
+    </div>
+    <div class="row section">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h2 class="text-lead text--center">Button special hover states:</h2>
+        <a href="#" class="btn btn--to-danger">to danger</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="section-title--white">Icon Set</h1>
+        <p class="page-subtitle--white">Icons on black</p>
+      </div>
+    </div>
+    <section class="text--white section">
+      <%= render 'welcome/brand/iconset', color: 'white' %>
+    </section>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="section-title">Icon Set</h1>
+        <p class="page-subtitle">Icons on white</p>
+      </div>
+    </div>
+    <section class="section">
+      <%= render 'welcome/brand/iconset' %>
+    </section>
+  </div>
+</section>
