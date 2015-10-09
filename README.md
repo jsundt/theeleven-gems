@@ -5,6 +5,12 @@ Includes:
 – Initial gem version of swolegrid (flexbox grid)
 https://github.com/jsundt/swolegrid
 
+## Gem Documentation
+
+#### The Eleven Boilerplate [a link](boilerplate.md)
+#### Flexbox Grid [a link](flex.md)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
