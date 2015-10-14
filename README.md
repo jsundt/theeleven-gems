@@ -10,18 +10,14 @@ A collection of simple gems by the teams at [The Eleven](http://www.theeleven.co
 * [Flexbox Grid](flex.md)
 
 
-## Install Gems
-
-Add the gems you want to your gemfile and execute: $ bundle
-
-```ruby
-gem 'theeleven-boilerplate', github: 'jsundt/theeleven-gems' #add for generator
-gem 'theeleven-flex', github: 'jsundt/theeleven-gems' #add for flexbox
-```
 
 
 ## Enviroment setup
 
-Install an scss linter for your editor. *Use the config I'll provide here later...*
+Lint all scss and js code to keep everything consistent across our projects, this can be done via the command line or by installing a linter package to atom or sublime text.
+
+In atom.io install the packages "language-ruby", "linter", "linter-jshint" & "linter-scss-lint"
+
+*Use the scss linter config I'll provide here later to get the correct settings...*
 
 This ensures all code stays readable and similar across all projects at The Eleven.

@@ -7,7 +7,7 @@ Default files and folders for ruby projects at The Eleven.
 Also includes some useful vendor files that are used in a lot of projects.
 
 
-### Gemfile
+### Installation
 
 ```ruby
 gem 'theeleven-boilerplate', github: 'jsundt/theeleven-gems' #add for generator
@@ -17,7 +17,7 @@ Add line above to gemfile and execute: $ bundle
 *keep comment at end for generator to inject gems into gemfile*
 
 
-### Installation
+##### Create project files
 
 **Only run in a new ruby app!**
 This gem replace some of the files in your app, including the application layout, .css, and .js files. You will be asked to confirm before the files are overwritten.
@@ -30,7 +30,6 @@ rails generate theeleven:boilerplate:create
 bundle install
 ```
 
-You'll need to add application__core.js to the asset initializer. A rails error will tell you how...
 
 
 ### Icon sets
