@@ -17,7 +17,8 @@ Add line above to gemfile and execute: $ bundle
 *keep comment at end for generator to inject gems into gemfile*
 
 
-##### Create project files
+
+#### Create project files
 
 **Only run in a new ruby app!**
 This gem replace some of the files in your app, including the application layout, .css, and .js files. You will be asked to confirm before the files are overwritten.

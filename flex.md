@@ -14,7 +14,8 @@ gem 'theeleven-flex', github: 'jsundt/theeleven-gems' #add for flexbox
 Add line above to gemfile and execute: $ bundle
 
 
-##### import scss files
+
+#### import scss files
 
 Add the grid scss file after your project variables like this:
 
@@ -25,7 +26,7 @@ Add the grid scss file after your project variables like this:
 ```
 
 
-##### Overwritting variables
+#### Overwritting variables
 
 To get a list of the default variables in this version of flex run:
 
