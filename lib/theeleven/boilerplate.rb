@@ -60,6 +60,7 @@ module Theeleven
         copy_file "../../templates/css/bootstrap_and_overrides.css.less", "app/assets/stylesheets/bootstrap_and_overrides.css.less"
 
         #Base CSS files
+        copy_file "../../templates/css/base/_brands.scss", "app/assets/stylesheets/base/_brands.scss"
         copy_file "../../templates/css/base/_config.scss", "app/assets/stylesheets/base/_config.scss"
         copy_file "../../templates/css/base/_mixins.scss", "app/assets/stylesheets/base/_mixins.scss"
         copy_file "../../templates/css/base/_functions.scss", "app/assets/stylesheets/base/_functions.scss"
