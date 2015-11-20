@@ -16,19 +16,20 @@
  */
 
 // defaults and helpers
+@import 'base/brands';     // Default colors and The Eleven brands
 @import 'base/config';     // Project Variables
 @import 'base/mixins';     // Reusable mixins and media queries
 @import 'base/functions';  // Helper functions
 @import 'base/generators'; // SCSS generators
 @import 'base/typography'; // Type hierachy
 @import 'base/iconset';    // Iconset styles
-@import 'base/animations';
+@import 'base/animations'; // Reusable animations
 
 @import 'base/layout'; //Base layout styles
 
 
 // Import reusable modules
-@import 'modules/*'; //import all app modules
+@import 'modules/**/*'; //import all app modules
 //@import "pages/*";   //import all app pages
 
 

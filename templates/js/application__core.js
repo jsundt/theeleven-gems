@@ -3,7 +3,7 @@
 // Slows down the app a tiny bit, but useful for inline scripts.
 // But runs modernizr and svg4everybody as soon as possible.
 //
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
 //= require theeleven-boilerplate/modernizr__custom
 //= require theeleven-boilerplate/svg4everybody

@@ -6,6 +6,7 @@
 //----------------------------------------\\
 
 //////////////// color, background, border
+// The fields can be changed in base/generators
 $buttons: (
   'secondary': (
     $white,
@@ -30,6 +31,7 @@ $buttons: (
 );
 
 //////////////// color, background, border
+// The fields can be changed in base/generators
 $button-hover-states: (
   'to-danger': (
     $white,
@@ -47,15 +49,13 @@ $button-hover-states: (
 .btn {
   // Generate btn--%{name} classes for default and hover states
   @include gen-buttons();
-  @include gen-button-hover();
-
 
   // Default button styling
   @include text-caption();
 
   border-radius: $br;
-  background: darken($primary-colour, 5%);
-  border: 1px solid darken($primary-colour, 10%);
+  background: darken($brand-primary, 5%);
+  border: 1px solid darken($brand-primary, 10%);
   color: $white;
   display: inline-block;
   height: $form-height;
@@ -81,8 +81,8 @@ $button-hover-states: (
 
   &:hover,
   &:focus {
-    background: $primary-colour;
-    border-color: darken($primary-colour, 5%);
+    background: $brand-primary;
+    border-color: darken($brand-primary, 5%);
     color: $white;
     text-decoration: none;
     outline: none;
@@ -91,10 +91,17 @@ $button-hover-states: (
   }
 
   &:active {
-    background: darken($primary-colour, 10%);
-    border-color: darken($primary-colour, 10%);
+    background: darken($brand-primary, 15%);
+    border-color: darken($brand-primary, 20%);
   }
 }
+
+// scss-lint:disable MergeableSelector
+// Needs to be here because of scss cascading
+.btn {
+  @include gen-button-hover();
+}
+
 
 
 

@@ -1,0 +1,107 @@
+
+
+
+//----------------------------------------\\
+// Default colors
+//----------------------------------------\\
+
+
+// Better default colors
+// Cool
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime:  #01ff70;
+// Warm
+$yellow:  #ffdc00;
+$orange:  #ff851b;
+$red:     #ff4136;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
+
+
+
+// Gray Scale TODO: Setup a proper and usable gray scale
+$white: #fff;
+$off-white: #f2f2f2;
+$silver: #dfe7eb;
+$grey: #aaa;
+$dark-grey: #888;
+$black: #111;
+$night: #000;
+
+
+
+// Misc colors
+$shadow: rgba(0, 0, 0, 0.2);
+
+
+
+//----------------------------------------\\
+// The big guys
+//----------------------------------------\\
+
+$facebook:  #3b5998;
+$linkedin:  #0077b5;
+$instagram: #3f729b;
+$twitter:   #55acee;
+$youtube:   #cd201f;
+$pinterest: #cc2127;
+$dribbble:  #ea4c89;
+
+
+
+//----------------------------------------\\
+// Companies and projects from The Eleven
+//----------------------------------------\\
+
+//// The Eleven
+//fonts Vitesse Sans (Forza) + Helvetica Neue
+$eleven-colour-1: #eb2127;
+$eleven-colour-2: #1d95d3;
+$eleven-colour-3: #262629;
+
+
+
+//// BORN SOCIAL
+//fonts Helvetica Neue
+$born-colour-1: #2ba4dc;
+$born-colour-2: #fcf1d9;
+
+
+
+//// making pretty
+//fonts Gotham
+$mp-colour-1: hsl(50, 100%, 50%);
+$mp-colour-2: hsl(50, 100%, 100%);
+$mp-colour-3: hsl(50, 5%, 14%);
+
+
+
+//// YOUTH
+
+  //// SURGE
+  //fonts Adelle Reg + Helvetica
+  $surge-colour-1: hsl(326, 91, 49);
+  $surge-colour-2: hsl(24, 90, 57);
+  $surge-gradient: linear-gradient(to right, hsla(326, 91, 49, 1) 0%, hsla(24, 90, 57, 1) 100%);
+
+
+
+//// Grandstand
+//fonts Brandon + Adelle
+$grandstand-colour-1: #0c3932; //RGB 13,57,50 - HSL 171, 65, 14
+$grandstand-colour-2: #f15f35; //RGB 241, 95, 53 - HSL 13, 87, 58
+
+
+
+//// Charlie
+//fonts Futura + Chaparral Pro
+$charlie-colour-1: #03a9f4;
+$charlie-colour-2: #2e424d;
+$charlie-success:  #50e3c2;
+$charlie-warning:  #e1552d;

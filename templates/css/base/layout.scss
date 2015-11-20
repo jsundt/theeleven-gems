@@ -6,26 +6,23 @@
 //----------------------------------------\\
 
 body {
-  background: $body-bg;
+  background: $off-white;
 }
 
-.section,
+  //generate .bg--%{color} from color-variants list
+  .bg {
+    @include gen-bg-variants();
+  }
+
 .padding {
   padding-top: $padding;
   padding-bottom: $padding;
 }
 
-  //generate .section--%{background} from color-variants list
-  .section {
-    @include gen-bg-variants();
-  }
-
-  .section--bottom,
   .padding--bottom {
     padding-bottom: $padding;
   }
 
-  .section--top,
   .padding--top {
     padding-top: $padding;
   }
