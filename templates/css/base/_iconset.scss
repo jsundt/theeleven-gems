@@ -44,7 +44,7 @@
 
 .icon--colored {
   .icon-part--success {
-    fill: $success-colour;
+    fill: $brand-success;
   }
 }
 
@@ -52,6 +52,6 @@
 .icon--app,
 .icon--small {
   &:hover {
-    fill: $primary-colour;
+    fill: $brand-primary;
   }
 }
