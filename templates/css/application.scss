@@ -25,12 +25,12 @@
 @import 'base/iconset';    // Iconset styles
 @import 'base/animations'; // Reusable animations
 
-@import 'base/layout'; //Base layout styles
+@import 'base/layout';     // Base layout styles
 
 
 // Import reusable modules
-@import 'modules/**/*'; //import all app modules
-//@import "pages/*";   //import all app pages
+@import 'modules/**/*';    // Import all app modules files and sub folders
+@import 'pages/*';         // Import all app pages
 
 
 // For anything quick and dirty that needs thrown in

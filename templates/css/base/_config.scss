@@ -9,7 +9,7 @@
 $br: 8px; // Border-radius
 $padding: 50px; // Padding and margins
 $gutter: 30px;
-$form-height: 44px; // Consistent height for buttons, inputs etc.
+$form-height: 44px; // Consistent height for buttons, inputs etc. TODO: redo this thing / figure out if we need it
 $timing: cubic-bezier(0.25, -0.25, 0.75, 1.25); //Animation timing
 
 
@@ -17,17 +17,18 @@ $timing: cubic-bezier(0.25, -0.25, 0.75, 1.25); //Animation timing
 // Project color variables
 $brand-primary:     $blue;
 $brand-secondary:   $yellow;
-$brand-tertiary:    darken($blue, 15%); // REVIEW: Do we need standard percentages, or seperate variables for darkened colors?
+$brand-tertiary:    darken($blue, 25%);
+// REVIEW: Do we need standard percentages, or seperate variables for darkened colors?
 
 $brand-success:     $green;
-$brand-info:        $teal;
-$brand-warning:     $yellow;
-$brand-danger:      $orange;
+$brand-info:        $blue;
+$brand-warning:     $orange;
+$brand-danger:      $red;
 
 
 
 //color variants are used to generate text and background colors
-// REVIEW: Do we need seperate for bg and color?
+// REVIEW: Do we need seperate arrays for background and text color?
 $color-variants: (
   primary:   $brand-primary,
   secondary: $brand-secondary,
@@ -47,7 +48,7 @@ $huge-break:   1200px; //bootstrap lg
 
 
 
-//// TODO: setup proper z-indexes
+//// TODO: setup proper / useful z-indexes
 $z-layers: (
   'bottom': -1,
   'default': 1,

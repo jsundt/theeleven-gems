@@ -1,7 +1,7 @@
 // Application Core is added to the head of the layout file.
 // To make sure jquery is loaded before the views.
 // Slows down the app a tiny bit, but useful for inline scripts.
-// But runs modernizr and svg4everybody as soon as possible.
+// Also runs modernizr and svg4everybody as soon as possible.
 //
 //= require jquery2
 //= require jquery_ujs

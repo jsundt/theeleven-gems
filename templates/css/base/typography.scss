@@ -55,7 +55,7 @@ $font-sizes: (
 //-----------------------------------\\
 
 @mixin title-default() {
-  //Used for h1–h6
+  //Used for h1-h6
   font-family: $title-font;
   font-weight: $title-weight;
   font-style: normal;
@@ -147,7 +147,6 @@ $font-sizes: (
     font-size: size(label, 2);
   }
 }
-
 
 @mixin font-size-caption() {
   font-size: size(small, 1);
@@ -327,6 +326,8 @@ $font-sizes: (
 //-----------------------------------\\
 // Typography defaults
 //-----------------------------------\\
+// TODO: Review and replace this section
+
 
 body {
   @include text-default();
@@ -457,50 +458,39 @@ a {
   }
 }
 
-.hidden-link {
-  text-decoration: none;
-  color: $text-color;
-
-  &:hover {
-    text-decoration: underline;
-    color: $primary-colour;
-  }
-}
-
-.hidden-link--white {
-  @extend .hidden-link;
-
-  color: $text-white;
-}
 
 
 //-----------------------------------\\
 // Typography utility classes
 //-----------------------------------\\
 
-.text--left   { text-align: left; }
-.text--center { text-align: center; }
-.text--right  { text-align: right; }
-.text--normal { font-weight: 400; }
-.text--bold   { font-weight: 700; }
-
-  .text-mobile--center {
-    @include max-width($medium-break - 1) {
-      text-align: center;
-    }
-
-    .icon {
-      width: 100%;
-    }
-  }
-
-
 .text {
   //generate .text--%{color} from color-variants list
   @include gen-color-variants();
+
+  &--left   { text-align: left; }
+  &--center { text-align: center; }
+  &--right  { text-align: right; }
+  &--normal { font-weight: 400; }
+  &--bold   { font-weight: 700; }
 }
 
+
+
+.text-mobile--center {
+  @include max-width($medium-break - 1) {
+    text-align: center;
+  }
+
+  .icon {
+    width: 100%;
+  }
+}
+
+
+
 .emoji {
+  // scss-lint:disable ImportantRule ColorKeyword ColorVariable
   font-family: sans-serif !important;
   color: black !important;
 }

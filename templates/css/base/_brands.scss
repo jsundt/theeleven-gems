@@ -1,12 +1,11 @@
 
-
+//scss-lint:disable Indentation
 
 //----------------------------------------\\
 // Default colors
 //----------------------------------------\\
 
 
-// Better default colors
 // Cool
 $aqua:  #7fdbff;
 $blue:  #0074d9;
@@ -69,39 +68,51 @@ $eleven-colour-3: #262629;
 
 //// BORN SOCIAL
 //fonts Helvetica Neue
-$born-colour-1: #2ba4dc;
-$born-colour-2: #fcf1d9;
+$born-color-1: #2ba4dc;
+$born-color-2: #fcf1d9;
+$born-color-3: #ba7a1d;
 
 
 
 //// making pretty
 //fonts Gotham
-$mp-colour-1: hsl(50, 100%, 50%);
-$mp-colour-2: hsl(50, 100%, 100%);
-$mp-colour-3: hsl(50, 5%, 14%);
+$mp-color-1: hsl(50, 100%, 50%);
+$mp-color-2: hsl(50, 100%, 100%);
+$mp-color-3: hsl(50, 5%, 14%);
 
 
 
 //// YOUTH
+//fonts Helvetica Neue? TODO: talk to Bron about the non exsting Youth Brand
+$youth-color-1: $white;
+$youth-color-2: $black;
 
   //// SURGE
   //fonts Adelle Reg + Helvetica
-  $surge-colour-1: hsl(326, 91, 49);
-  $surge-colour-2: hsl(24, 90, 57);
-  $surge-gradient: linear-gradient(to right, hsla(326, 91, 49, 1) 0%, hsla(24, 90, 57, 1) 100%);
+  $surge-color-1: hsl(326, 91, 49);
+  $surge-color-2: hsl(24, 90, 57);
+  $surge-gradient: linear-gradient(to right, $surge-color-1 0%, $surge-color-2 100%);
 
 
 
 //// Grandstand
 //fonts Brandon + Adelle
-$grandstand-colour-1: #0c3932; //RGB 13,57,50 - HSL 171, 65, 14
-$grandstand-colour-2: #f15f35; //RGB 241, 95, 53 - HSL 13, 87, 58
+$grandstand-color-1: #0c3932; //RGB 13,57,50 - HSL 171, 65, 14
+$grandstand-color-2: #f15f35; //RGB 241, 95, 53 - HSL 13, 87, 58
 
 
 
 //// Charlie
 //fonts Futura + Chaparral Pro
-$charlie-colour-1: #03a9f4;
-$charlie-colour-2: #2e424d;
+$charlie-color-1: #03a9f4;
+$charlie-color-2: #2e424d;
 $charlie-success:  #50e3c2;
 $charlie-warning:  #e1552d;
+
+
+
+//// The Forge
+
+
+
+//// The Gathering?

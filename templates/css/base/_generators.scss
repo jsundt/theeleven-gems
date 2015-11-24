@@ -6,7 +6,7 @@
 //-----------------------------------\\
 
 
-// Generate colour variants
+// Generate background variants
 @mixin gen-bg-variants($variants: $color-variants) {
   @each $variant in map-keys($variants) {
     $value: map-get($variants, $variant);
@@ -17,6 +17,7 @@
   }
 }
 
+// Generate text color variants
 @mixin gen-color-variants($variants: $color-variants) {
   @each $variant in map-keys($variants) {
     $value: map-get($variants, $variant);
@@ -26,6 +27,7 @@
     }
   }
 }
+
 
 
 // Generate Button variants
@@ -41,6 +43,7 @@
   }
 }
 
+// Generate Button hover state variants
 @mixin gen-button-hover($variants: $button-hover-states) {
   @each $variant in map-keys($variants) {
     $value: map-get($variants, $variant);
