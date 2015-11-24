@@ -11,15 +11,15 @@ module Theeleven
 
       # Setup important files and folders
       def copy_files
-        templates = "../../templates/"
 
         # Copy and replace all project assets files
-        FileUtils.cp_r templates + 'js/.', 'app/assets/javascripts'
-        FileUtils.cp_r templates + 'css/.', 'app/assets/stylesheets'
-        FileUtils.cp_r templates + 'images/.', 'app/assets/images'
+        FileUtils.cp_r '../../templates/images', 'app/assets'
+        FileUtils.cp_r '../../templates/javascripts', 'app/assets'
+        FileUtils.cp_r '../../templates/stylesheets', 'app/assets'
+
 
         # Copy and replace all project view files
-        FileUtils.cp_r templates + 'views/.', 'app/views/'
+        FileUtils.cp_r '../../templates/views/.', 'app/views/'
 
         # FileUtils.mkdir_p "app/assets/javascripts/core"
         # FileUtils.mkdir_p "app/assets/stylesheets/base"
@@ -32,21 +32,22 @@ module Theeleven
         # FileUtils.remove_file "app/assets/stylesheets/application.css"
 
 
-        #Create Initial Controller
+        # Create Welcome Controller
         copy_file "../../templates/rails/welcome_controller.rb", "app/controllers/welcome_controller.rb"
 
 
-        #Edit routes file
+        # Setup brand guidelines page
         inject_into_file 'config/routes.rb', :after => "Rails.application.routes.draw do" do
           "\n\n  root to: 'welcome#brand'\n\n"
         end
 
-        #Edit asset initializer file
+        # Edit asset initializer file
+        # Makes the file accessible as stylesheet / js ruby tags in layout
         inject_into_file 'config/initializers/assets.rb', :after => "Precompile additional assets." do
           "\nRails.application.config.assets.precompile += %w( application__core.js )\nRails.application.config.assets.precompile += %w( application__core.scss )\n\n"
         end
 
-        #Edit gemfile
+        # Edit gemfile
         inject_into_file 'Gemfile', :after => "#add for generator" do
           "\n\ngem 'autoprefixer-rails'\ngem 'twitter-bootstrap-rails'\ngem 'less-rails'\ngem 'therubyracer', platforms: :ruby\n\ngem 'heroku-deflater', :group => :production\ngem 'rails_12factor', :group => :production"
         end
