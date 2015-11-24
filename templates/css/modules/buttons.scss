@@ -5,23 +5,23 @@
 // Button variables
 //----------------------------------------\\
 
-//////////////// color, background, border
+//////////////// text color, background, border color
 // The fields can be changed in base/generators
 $buttons: (
   'secondary': (
     $white,
-    $secondary-colour,
-    darken($secondary-colour, 5%)
+    $brand-secondary,
+    darken($brand-secondary, 5%)
   ),
   'dark': (
     $white,
-    $tertiary-colour,
-    darken($tertiary-colour, 5%)
+    $brand-tertiary,
+    darken($brand-tertiary, 5%)
   ),
   'ghost': (
-    $secondary-colour,
+    $brand-secondary,
     transparent,
-    rgba($secondary-colour, 0.5)
+    rgba($brand-secondary, 0.5)
   ),
   'ghost-white': (
     $white,
@@ -30,13 +30,13 @@ $buttons: (
   ),
 );
 
-//////////////// color, background, border
+//////////////// text color, background, border color
 // The fields can be changed in base/generators
 $button-hover-states: (
   'to-danger': (
     $white,
-    $danger-colour,
-    darken($danger-colour, 5%)
+    $brand-danger,
+    darken($brand-danger, 5%)
   ),
 );
 
@@ -45,6 +45,7 @@ $button-hover-states: (
 //-----------------------------------------\\
 // # Button Generation
 //-----------------------------------------\\
+// REVIEW: Figure out what we actually need to reset accross input, button & a
 
 .btn {
   // Generate btn--%{name} classes for default and hover states
@@ -63,6 +64,7 @@ $button-hover-states: (
   outline: none;
   padding: 0 25px;
   text-align: center;
+  vertical-align: top; // make sure <button> renders inline with <a>
   text-decoration: none;
   margin-bottom: 10px;
   width: 100%;
