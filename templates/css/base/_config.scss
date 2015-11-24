@@ -30,10 +30,10 @@ $brand-danger:      $red;
 //color variants are used to generate text and background colors
 // REVIEW: Do we need seperate arrays for background and text color?
 $color-variants: (
-  primary:   $brand-primary,
-  secondary: $brand-secondary,
-  success:   $brand-success,
-  danger:    $brand-danger,
+  'primary':   $brand-primary,
+  'secondary': $brand-secondary,
+  'success':   $brand-success,
+  'danger':    $brand-danger,
   'white':   $white,
   'silver':  $silver,
   'dark':    $black,
@@ -53,9 +53,9 @@ $huge-break:   1200px; //bootstrap lg
 $z-layers: (
   'bottom': -1,
   'default': 1,
-  over: 2,
+  'over': 2,
   'top': 3,
-  dropdown: 4,
-  overlay: 5,
-  modal: 6,
+  'dropdown': 4,
+  'overlay': 5,
+  'modal': 6,
 );
