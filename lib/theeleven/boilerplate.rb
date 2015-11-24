@@ -9,7 +9,7 @@ module Theeleven
     class CreateGenerator < Rails::Generators::Base
       source_root File.expand_path('..', __FILE__)
 
-      # Copy all needed stylesheets in the asset directory of the application
+      # Setup important files and folders
       def copy_files
         FileUtils.mkdir_p "app/assets/javascripts/core"
         FileUtils.mkdir_p "app/assets/stylesheets/base"
@@ -31,7 +31,7 @@ module Theeleven
 
         #Edit asset initializer file
         inject_into_file 'config/initializers/assets.rb', :after => "Precompile additional assets." do
-          "\nRails.application.config.assets.precompile += %w( application__core.js )\n\n"
+          "\nRails.application.config.assets.precompile += %w( application__core.js )\nRails.application.config.assets.precompile += %w( application__core.scss )\n\n"
         end
 
         #Edit gemfile
@@ -56,6 +56,7 @@ module Theeleven
 
 
         #Application CSS
+        copy_file "../../templates/css/application__core.scss", "app/assets/stylesheets/application__core.scss"
         copy_file "../../templates/css/application.scss", "app/assets/stylesheets/application.scss"
         copy_file "../../templates/css/bootstrap_and_overrides.css.less", "app/assets/stylesheets/bootstrap_and_overrides.css.less"
 

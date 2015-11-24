@@ -1,0 +1,28 @@
+// scss-lint:disable Comment
+
+//
+// This file contains important css that have to be loaded straigh away.
+// Default for now is this is rendered on top of application.scss
+// But could potentially be rendered out on top of the layouts files
+// and then loading application.scss async to avoid blocking page rendering.
+//
+// REVIEW: Would bootstrap be critical for rendering?
+// Quite a heavy thing to put on top of the html...
+//
+
+/*
+ *= require bootstrap_and_overrides
+ *= require_self
+ */
+
+// defaults and helpers
+@import 'base/brands';     // Default colors and The Eleven brands
+@import 'base/config';     // Project Variables
+@import 'base/mixins';     // Reusable mixins and media queries
+@import 'base/functions';  // Helper functions
+@import 'base/generators'; // SCSS generators
+@import 'base/typography'; // Type hierachy
+@import 'base/iconset';    // Iconset styles
+@import 'base/animations'; // Reusable animations
+
+@import 'base/layout';     // Base layout styles
