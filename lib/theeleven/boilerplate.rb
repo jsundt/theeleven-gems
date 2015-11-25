@@ -12,14 +12,18 @@ module Theeleven
       # Setup important files and folders
       def copy_files
 
-        # Copy and replace all project assets files
-        FileUtils.cp_r '../../templates/images', 'app/assets'
-        FileUtils.cp_r '../../templates/javascripts', 'app/assets'
-        FileUtils.cp_r '../../templates/stylesheets', 'app/assets'
+        # Copy and replace all core assets files
+        FileUtils.cp_r  '../../templates/core_assets/.',
+                        'app/assets',
+                        :remove_destination => true
 
 
-        # Copy and replace all project view files
-        FileUtils.cp_r '../../templates/views/.', 'app/views/'
+        # Copy and replace all core view files
+        FileUtils.cp_r  '../../templates/core_views/.',
+                        'app/views',
+                        :remove_destination => true
+
+
 
         # FileUtils.mkdir_p "app/assets/javascripts/core"
         # FileUtils.mkdir_p "app/assets/stylesheets/base"
